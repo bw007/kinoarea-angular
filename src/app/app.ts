@@ -6,12 +6,9 @@ import { RouterOutlet } from '@angular/router';
   selector: 'app-root',
   imports: [RouterOutlet, TuiRoot],
   template: `
-  <tui-root>
-    <router-outlet />
-  </tui-root>
-  `,
-  styles: [],
+    <tui-root>
+        <router-outlet />
+    </tui-root>
+  `
 })
-export class App {
-  protected readonly title = signal('kinoarea-angular');
-}
+export class App {}

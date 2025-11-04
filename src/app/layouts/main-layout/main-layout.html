@@ -1,0 +1,52 @@
+<ng-container>
+  <router-outlet></router-outlet>  
+  <div class="bg-gray-900">
+    <div class="container mx-auto px-7 text-white pt-5 sm:pt-6 lg:pt-7 xl:pt-11">
+      <div *transloco="let t; prefix: 'subscribe'" tuiCardLarge class="rounded-[10px]! items-center! gap-6! xl:gap-8! py-7! md:py-9! lg:py-12! xl:py-16!
+        bg-[linear-gradient(rgba(29,58,160,0.9),rgba(29,58,160,0.9)),url('/banner/footer-1.png')]!
+        sm:bg-[linear-gradient(rgba(29,58,160,0.9),rgba(29,58,160,0.9)),url('/banner/footer-1-md.png')]!
+        lg:bg-[linear-gradient(rgba(29,58,160,0.9),rgba(29,58,160,0.9)),url('/banner/footer-1-xl.png')]! bg-no-repeat! bg-cover! bg-center!">
+        <a routerLink="/" class="xl:mb-5">
+          <img src="logo-footer.svg" alt="Brand logo">
+        </a>
+
+        <h2 class="text-2xl md:text-4xl xl:text-5xl text-center max-w-56 sm:max-w-max font-bold">
+          {{t('title')}}
+        </h2>
+
+        <p class="text-center sm:max-w-xl xl:max-w-2xl xl:leading-normal xl:text-xl xl:font-medium">
+          {{t('description')}}
+        </p>
+
+        <form action="" class="w-full px-5 md:px-10 flex flex-col gap-2.5">
+          <div class="w-full mx-auto sm:max-w-xl xl:max-w-2xl flex flex-col sm:flex-row gap-2.5">
+            <tui-textfield tuiTextfieldSize="l" class="bg-white! rounded-[10px]! min-h-16! flex-1!">
+              <input
+                autocomplete="off"
+                [placeholder]="t('input_placeholder')"
+                inputmode="email"
+                class="text-center!"
+                [(ngModel)]="email"
+                name="email"
+              />
+            </tui-textfield>
+            <button tuiButton class="rounded-[10px]! h-16! text-gray-900! px-5! md:px-8! bg-yellow-300! active:bg-yellow-500! hover:bg-yellow-400!">
+              {{t('button')}}
+            </button>
+          </div>
+          <div class="text-center my-2 md:my-4 flex justify-center items-center mx-auto sm:gap-2.5 max-w-64 sm:max-w-max">
+            <input
+              tuiCheckbox
+              type="checkbox"
+              [ngModel]="true"
+              name="privacy"
+              size="s"
+              class="bg-yellow-300! mb-auto! mt-0.5! sm:m-0! rounded-sm! text-gray-900!"
+            />
+            <span class="text-sm sm:text-[17px]">{{t('terms')}} <a routerLink="/" class="text-yellow-200 hover:text-yellow-300 cursor-pointer underline">{{t('privacy')}}</a></span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</ng-container>

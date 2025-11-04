@@ -1,0 +1,17 @@
+<ng-container>
+  <app-header
+    [currentView]="currentView()"
+    (onMenuOpen)="menuOpen.set($event)"
+    [navItems]="navItems()"
+    [socials]="socials"
+  />
+  <router-outlet />
+  @if (currentView() === view.Handset) {
+  <app-mobile-nav-overlay
+    [menuOpen]="menuOpen()"
+    (onMenuOpen)="menuOpen.set($event)"
+    [navItems]="navItems()"
+  />
+  }
+  <app-footer [navItems]="navItems()" [socials]="socials" />
+</ng-container>

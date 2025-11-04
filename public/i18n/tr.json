@@ -1,0 +1,24 @@
+{
+  "navigation": {
+    "posters": "Posterler",
+    "media": "Medya",
+    "movies": "Filmler",
+    "actors": "Oyuncular",
+    "news": "Haberler",
+    "collections": "Koleksiyonlar",
+    "categories": "Kategoriler"
+  },
+  "subscribe": {
+    "title": "Ücretsiz e-posta bültenine abone olun",
+    "description": "En güncel film haberlerinden haberdar olmak istiyorsanız, aşağıdaki formu doldurup ücretsiz e-posta bültenine kaydolun!",
+    "input_placeholder": "E-posta adresinizi girin",
+    "button": "Abone ol",
+    "terms": "Şartları kabul ediyorum",
+    "privacy": "gizlilik politikaları"
+  },
+  "footer": {
+    "rights": "Tüm hakları saklıdır.",
+    "privacy": "Gizlilik Politikası",
+    "terms": "Kullanım Şartları"
+  }
+}

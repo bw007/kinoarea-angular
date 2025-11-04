@@ -1,0 +1,24 @@
+{
+  "navigation": {
+    "posters": "ポスター",
+    "media": "メディア",
+    "movies": "映画",
+    "actors": "俳優",
+    "news": "ニュース",
+    "collections": "コレクション",
+    "categories": "カテゴリー"
+  },
+  "subscribe": {
+    "title": "無料メールニュースレターに登録",
+    "description": "最新の映画ニュースを入手したい場合は、以下のフォームに記入して無料のメールニュースレターに登録してください！",
+    "input_placeholder": "メールアドレスを入力してください",
+    "button": "登録する",
+    "terms": "利用規約に同意します",
+    "privacy": "プライバシーポリシー"
+  },
+  "footer": {
+    "rights": "全著作権所有",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約"
+  }
+}

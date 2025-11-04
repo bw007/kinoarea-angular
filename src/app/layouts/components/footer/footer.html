@@ -1,53 +1,53 @@
-<footer class="container-d flex flex-col items-center gap-6 py-7 bg-gray-900">
-  
+<footer class="py-7 bg-gray-900">
+  <div class="container mx-auto px-7 flex flex-col items-center gap-6">
     <tui-textfield
-        iconStart="@tui.languages"
-        tuiChevron
-        tuiTextfieldSize="s"
-        [tuiTextfieldCleaner]="false"
-        class="w-28!"
-        [content]="i18n.lang! && ''"
-        [stringify]="stringify"
-      >
-        <input
-          placeholder="Select"
-          tuiSelect
-          [(ngModel)]="i18n.lang"
-          name="value"
-          (ngModelChange)="i18n.setLang(i18n.lang())"
-          class="bg-gray-200!"
-        />
+      iconStart="@tui.languages"
+      tuiChevron
+      tuiTextfieldSize="s"
+      [tuiTextfieldCleaner]="false"
+      class="w-28!"
+      [content]="i18n.lang! && ''"
+      [stringify]="stringify"
+    >
+      <input
+        placeholder="Select"
+        tuiSelect
+        [(ngModel)]="i18n.lang"
+        name="value"
+        (ngModelChange)="i18n.setLang(i18n.lang())"
+        class="bg-gray-200!"
+      />
 
-        <tui-data-list-wrapper
-          class="bg-gray-200!"
-          *tuiTextfieldDropdown
-          new
-          tuiOp
-          [items]="i18n.languages"
-        />
+      <tui-data-list-wrapper
+        class="bg-gray-200!"
+        *tuiTextfieldDropdown
+        new
+        tuiOp
+        [items]="i18n.languages"
+      />
     </tui-textfield>
     
+    <div class="flex items-center justify-between gap-2 w-44">
+      @for (item of socials(); track item.icon) {
+      <tui-icon
+        class="text-gray-600 cursor-pointer hover:text-gray-50 transition-colors duration-300"
+        target="_blank"
+        [routerLink]="item.link"
+        [style.font-size.rem]="1"
+        [icon]="item.icon"
+      />
+      }
+    </div>
 
-  <div class="flex items-center justify-between gap-2 w-44">
-    @for (item of socials(); track item.icon) {
-    <tui-icon
-      class="text-gray-600 cursor-pointer hover:text-gray-50 transition-colors duration-300"
-      target="_blank"
-      [routerLink]="item.link"
-      [style.font-size.rem]="1"
-      [icon]="item.icon"
-    />
-    }
-  </div>
+    <nav class="flex flex-col md:flex-row justify-center items-center text-xs lg:text-sm xl:text-base font-bold gap-5 md:gap-8 xl:gap-10">
+      @for (item of navItems(); track $index) {
+        <a class="text-gray-400 hover:text-white transition-colors duration-300" [routerLink]="item.link">{{ item.title() }}</a>
+      }
+    </nav>
 
-  <nav class="flex flex-col md:flex-row justify-center items-center text-xs lg:text-sm xl:text-base font-bold gap-5 md:gap-8 xl:gap-10">
-    @for (item of navItems(); track $index) {
-      <a class="text-gray-400 hover:text-white transition-colors duration-300" [routerLink]="item.link">{{ item.title() }}</a>
-    }
-  </nav>
-
-  <div *transloco="let t; prefix: 'footer'" class="flex flex-col items-center text-gray-400 text-[13px] lg:text-[15px] lg:leading-loose">
-    <p i18n>{{ year }} © Kinoarea. {{t('rights')}}</p>
-    <a i18n routerLink="/" class="underline hover:text-white">{{ t('privacy') }}</a>
-  </div>
+    <div *transloco="let t; prefix: 'footer'" class="flex flex-col items-center text-gray-400 text-[13px] lg:text-[15px] lg:leading-loose">
+      <p i18n>{{ year }} © Kinoarea. {{t('rights')}}</p>
+      <a i18n routerLink="/" class="underline hover:text-white">{{ t('privacy') }}</a>
+    </div>
+  </div> 
 </footer>

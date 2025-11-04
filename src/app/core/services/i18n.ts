@@ -19,7 +19,7 @@ export class I18n {
   public readonly languages: LangT[] = [
     { title: 'English', name: 'english', code: 'en' },
     { title: 'Русский', name: 'russian', code: 'ru' },
-    { title: '日本語', name: 'japan', code: 'jp' },
+    { title: '日本語', name: 'japan', code: 'ja' },
     { title: 'Türkçe', name: 'turkish', code: 'tr' },
   ];
 

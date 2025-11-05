@@ -5,10 +5,17 @@ import { TuiLanguageSwitcherService } from '@taiga-ui/i18n/utils';
 
 import { type TuiLanguageName } from "@taiga-ui/i18n/types";
 
+enum langCode {
+  En = 'en',
+  Ru = 'ru',
+  Ja = 'ja',
+  Tr = 'tr'
+}
+
 export interface LangT {
   title: string;
   name: TuiLanguageName;
-  code: string;
+  code: langCode;
 }
 
 @Injectable({ providedIn: 'root' })
@@ -17,10 +24,10 @@ export class I18n {
   protected readonly translocoService = inject(TranslocoService);
 
   public readonly languages: LangT[] = [
-    { title: 'English', name: 'english', code: 'en' },
-    { title: 'Русский', name: 'russian', code: 'ru' },
-    { title: '日本語', name: 'japan', code: 'ja' },
-    { title: 'Türkçe', name: 'turkish', code: 'tr' },
+    { title: 'English', name: 'english', code: langCode.En },
+    { title: 'Русский', name: 'russian', code: langCode.Ru },
+    { title: '日本語', name: 'japan', code: langCode.Ja },
+    { title: 'Türkçe', name: 'turkish', code: langCode.Tr },
   ];
 
   lang = signal<LangT>(this.languages[0]);

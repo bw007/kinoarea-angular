@@ -8,6 +8,19 @@
     "collections": "Koleksiyonlar",
     "categories": "Kategoriler"
   },
+  "home": {
+    "movies_title": "Şu anda gösterimde",
+    "filter_navs": {
+      "all": "Tümü",
+      "action": "Aksiyon",
+      "adventure": "Macera", 
+      "comedy": "Komedi",
+      "scifi": "Bilim Kurgu",
+      "thriller": "Gerilim",
+      "drama": "Dram"
+    }
+  },
+  "film_card_button": "Film kartı",
   "subscribe": {
     "title": "Ücretsiz e-posta bültenine abone olun",
     "description": "En güncel film haberlerinden haberdar olmak istiyorsanız, aşağıdaki formu doldurup ücretsiz e-posta bültenine kaydolun!",

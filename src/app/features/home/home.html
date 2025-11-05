@@ -1,0 +1,26 @@
+<div class="py-6">
+  <div class="container px-7 py-2 mx-auto flex flex-col gap-5 text-white">
+    <div class="flex md:flex-col xl:flex-row justify-center md:justify-start xl:justify-between items-center md:items-start xl:items-center gap-1 md:mb-2">
+      <h1 *transloco="let t" class="text-[32px] md:text-[40px] xl:text-[65px] font-black leading-normal xl:pb-4">
+        {{ t('home.movies_title') }}
+      </h1>
+      <button size="m" tuiButton appearance="secondary" class="mt-2 md:hidden!">
+        <tui-icon icon="@tui.menu" class="text-white! active:text-gray-200!" />
+      </button>
+      <span class="hidden xl:inline-block w-12 h-0.5 bg-white"></span>
+      <div class="hidden md:flex justify-between gap-6 font-bold text-[15px] xl:text-[18px] items-center">
+        @for (item of filterItems(); track item.title()) {
+        <a class="text-gray-400 hover:text-white transition-colors duration-300">
+          {{ item.title() }}
+        </a>
+        }
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-3 md:gap-x-3.5 lg:gap-x-5 gap-y-10">
+      @for (item of filmData; track item.id) {
+      <app-film-card [filmData]="item"></app-film-card>
+      }
+    </div>
+  </div>
+</div>

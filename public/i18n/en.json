@@ -8,6 +8,19 @@
     "collections": "Collections",
     "categories": "Categories"
   },
+  "home": {
+    "movies_title": "Movies in theaters",
+    "filter_navs": {
+      "all": "All",
+      "action": "Action",
+      "adventure": "Adventure", 
+      "comedy": "Comedy",
+      "scifi": "Sci-Fi",
+      "thriller": "Thriller",
+      "drama": "Drama"
+    }
+  },
+  "film_card_button": "More",
   "subscribe": {
     "title": "Subscribe for free E-mail newsletter",
     "description": "If you want to keep up to date with the latest movie news, fill out the form below and sign up for the free E-mail newsletter!",

@@ -8,6 +8,19 @@
     "collections": "コレクション",
     "categories": "カテゴリー"
   },
+  "home": {
+    "movies_title": "現在上映中",
+    "filter_navs": {
+      "all": "すべて",
+      "action": "アクション",
+      "adventure": "アドベンチャー",
+      "comedy": "コメディ",
+      "scifi": "SF",
+      "thriller": "スリラー",
+      "drama": "ドラマ"
+    }
+  },
+  "film_card_button": "映画カード",
   "subscribe": {
     "title": "無料メールニュースレターに登録",
     "description": "最新の映画ニュースを入手したい場合は、以下のフォームに記入して無料のメールニュースレターに登録してください！",

@@ -1,0 +1,27 @@
+<div class="flex flex-col justify-between gap-1 cursor-pointer group" routerLink="/">
+  <div class="rounded-[10px] aspect-2/3 flex-1 overflow-hidden relative">
+    <img [src]="filmData().thumbnail" class="object-cover h-full w-full" alt="Film Poster">
+    <tui-chip
+      class="justify-center! text-xs! w-10! md:w-11! xl:w-16! h-5! md:h-6! xl:h-8! rounded-[5px]! absolute! z-10 top-2.5! md:top-3! right-2.5! md:right-3!"
+      appearance="accent"
+      [style]="{ background: filmData().rating > 5 ? '#89CB36' : '#CB3F36' }"  
+    >
+      {{ filmData().rating }}
+    </tui-chip>
+    
+    <div class="flex items-center justify-center absolute inset-0 bg-[#3657cba6] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto">
+      <button
+        tuiButton
+        *transloco="let t"
+        appearance="floating"
+        class="text-blue-700! rounded-[10px]! h-10! px-4! sm:px-5! sm:h-14! text-xs! sm:text-sm! active:opacity-90 hover:opacity-75 transition-opacity duration-200"
+      >
+        {{ t('film_card_button') }}
+      </button>
+    </div>
+  </div>
+  <div class="flex flex-col">
+    <p class="text-[15px] xl:text-lg font-bold">{{ filmData().title }}</p>
+    <span class="text-xs xl:text-sm text-yellow-400">{{ filmData().genre[currentLang().code].join(", ") }}</span>
+  </div>
+</div>

@@ -1,0 +1,1 @@
+export type { FilmT, FilmDataT } from "./film-model"
